@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Contact</title>
+    <script src="https://kit.fontawesome.com/89a0f098ca.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.75),rgba(0,0,0,0.75)), url(background1.jpeg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #d3ed84;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.navbar .fa-solid{
+    margin-right: 8px;
+}
+
+body{
+    font-family: monospace;
+}
+
+.contact-container{
+    height: 70vh;
+    display:block;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 80px;
+    margin-top: 1px;
+    position: relative;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction:column;
+    align-items: start;
+    gap: 25px;
+}
+
+.contact-left title h2{
+    font-weight: 600;
+    color: #d3ed84;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left h2{
+    font-weight: 600;
+    color: bisque;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+
+}
+
+.contact-inputs{
+    width: 600px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    font-weight: 500;
+    color:darkslategrey;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.contact-inputs :focus{
+    border: 2px solid  antiquewhite;
+}
+
+.contact-inputs::placeholder{
+    color:rgb(23, 32, 32);
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: rgb(85, 78, 67);
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #d3ed84;
+    cursor: pointer;
+}
+
+.contact-left button img{
+    height: 15px;
+}
+
+@media(max-width:800px){
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
+    }
+}
+
+</style>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo">nurnajwa</div>
+            <ul>
+                <li><a href="index3.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="index5.html"><i class="fa-solid fa-paw"></i>About Me</a></li>
+                <li><a href="index7.html"><i class="fa-solid fa-star"></i></i>My Interest</a></li>
+                <li><a href="index6.html"><i class="fa-solid fa-envelopes-bulk"></i>Contact</a></li>
+                
+
+
+            </ul>
+        </div>
+
+<div class="contact-container">
+    <form action="" class="contact-left" name="submit-to-google-sheet">
+        <div class="contact-left-title">
+            <h2 class="anime">Get in touch with me!</h2>
+            <hr></div>
+            <input type="text" name="Name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="Email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="Message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit"> Submit <img src="arrow.png" alt=""></button>
+
+    </form>
+    <span id="msg"></span>
+    <div class="contact-right">
+        <img src="" alt="">
+
+    </div>
+</div>
+
+<div class="icon">
+    <div class="anime">
+    <a href="mailto:2023601264@student.uitm.edu.my"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://www.instagram.com/whawoooo"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@najwawoo"><i class="fa-brands fa-tiktok"></i>
+    <a href="https://www.youtube.com/@NURNAJWAIBRAHIM"><i class="fa-brands fa-youtube"></i></a></div>
+</div>
+        </div>
+    
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyWPVnK_QbMPfZ31TO9t5iE15JiLl7KOwbBi_l_t_Z3QfwIEIWAx7GQ2w25XtblMVk/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        } )
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<div class="cat">
+<img src="cat.webp"></div>
+
+<style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAQACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAD///oAAAAAAPn7+wD+/f4A//3+APn6/QD7+/sA+/j6APj8/wD++fgA/P39AP7++wD9/f0A///5AP/9/QD7/PgA/Pv6APj59wD7//8A/fz+AP/9/AD6+/kA+/v5APb3+gD7/vkA/P37APz8/QD+/fsA/vz9AP/8/QD6+voA+Pf5APj9+gDaldsA/v/9AP///QD//v8A+fr5APj5+wD6+vkA//z8APv6+QD6+fsA+f7+APr3+AD+//wA/v7+APr8+wD8+/0A/v/7AP3+/QD9/f8A+fv8AP79/wD//f8A+/z6ABYKJAD9/PoA/fv8AP36/gD39foA+/78AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATg4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE4LgM4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBOC4uIC44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATguLi4kHQ44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE4Li4uPBoQGxQ4AQEBAQEBAQEBAQEBAQEBAQEBAQEBOC4uCQouLisKOjo4AQEBAQEBAQEBAQEBAQEBAQEBATguLQwSCgQENAguLi44AQEBAQEBAQEBAQEBAQEBAQE4Li45JC4aLi4uLi4uLjgBAQEBAQEBAQEBAQEBAQEBOC4nFS4ALi4uLi4uLi44AQEBAQEBAQEBAQEBAQE4ODguLDECAyMuLi4uLi4uOAEBAQEBAQEBAQEBAQEBOC42LikLPS4uLS4uLi4uLjgBAQEBAQEBAQEBAQEBATguLi4RDBcFMy4uLi4uLi44AQEBAQEBAQEBAQEBAQEBOC4iIS4hIS4mMi4uLi4uOAEBAQEBAQEBAQEBAQEBAQEBOB4uFiEhIS4uHC4uLjgBAQEBAQEBAQEBAQEBAQEBAQE4NRAoISEhIS4tBy44AQEBAQEBAQEBAQEBAQEBAQEBATgvITsuISEhLg8uOAEBAQEBAQEBAQEBAQEBAQEBAQEBOBghJS4wHzUZNy44AQEBAQEBAQEBAQEBAQEBAQEBAQE4LgYNLiEDKiEuLjgBAQEBAQEBAQEBAQEBAQEBAQEBAQE4ODguISQqLi44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBOBYDEzguLjgBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBODg4ATg4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf///////////////////////P////h////wP///4B///8AP//+AB///AAP//gAD//wAB//gAA//wAAf/4AAP/+AAH//wAD//8AB///AA///wAP//8AD///gB///+Af///xP////////////////////////////////////////'), auto; }</style>
+</body>
+
+</html>

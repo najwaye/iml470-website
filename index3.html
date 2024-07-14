@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Welcome to My First Website!</title>
+    <script src="https://kit.fontawesome.com/89a0f098ca.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.75),rgba(0,0,0,0.75)), url(background1.jpeg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #d3ed84;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.navbar .fa-solid{
+    margin-right: 8px;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content p{
+    margin: 20px;
+    font-weight: 80;
+    line-height: 25px;
+    animation-delay: 0.5s;
+}
+
+button{
+    width: 300px;
+    padding: 15px 0;
+    text-align:center;
+    margin: 20px 10px;
+    border-radius: 5px;
+    font-weight:bolder;
+    border: 2px solid #d3ed84;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+
+}
+
+span{
+    background: #d3ed84;
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.6s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+    color:black
+}
+
+.icon{
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.icon a{
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0 10px;
+    color:aliceblue ;
+    display: inline-block;
+    transition: transform 0.5s;
+    animation-delay: 0.5s;
+}
+
+.icon a:hover{
+    color:deeppink;
+    transform: translateY(-5px);
+}
+
+.sub-menu-1{
+    display: none; 
+}
+
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgb(0, 100, 0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:hover{
+    color:#d3ed84;
+}
+
+.anime{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+</style>
+
+
+<body>
+
+
+
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo">nurnajwa</div>
+            <ul>
+                <li><a href="index3.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="index5.html"><i class="fa-solid fa-paw"></i>About Me</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="index4.html">Me</a></li>
+                            <li><a href="index5.html">My Subject</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="index7.html"><i class="fa-solid fa-star"></i></i>My Interest</a></li>
+                <li><a href="index6.html"><i class="fa-solid fa-envelopes-bulk"></i>Contact</a></li>
+                
+            </ul>
+        </div>
+
+        
+        <div class="content">
+        <h1 class="anime">Welcome to My First Website!</h1>
+        <p class="anime">This is my first ever website for the subject <br> IML470: Introduction to Web Development and Library Portal</p>
+        <div>
+            <button type="button"; button onclick="document.location='index4.html'" class="anime">Get to know more about me <3<span></span></button> 
+
+            <div class="icon">
+    <a href="mailto:2023601264@student.uitm.edu.my" class="anime"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://www.instagram.com/whawoooo" class="anime"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@najwawoo" class="anime"><i class="fa-brands fa-tiktok"></i>
+    <a href="https://www.youtube.com/@NURNAJWAIBRAHIM" class="anime"><i class="fa-brands fa-youtube"></i></a></div>
+
+        </div>
+
+
+
+    </div>
+    </div>
+    
+
+ <style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAQACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAD///oAAAAAAPn7+wD+/f4A//3+APn6/QD7+/sA+/j6APj8/wD++fgA/P39AP7++wD9/f0A///5AP/9/QD7/PgA/Pv6APj59wD7//8A/fz+AP/9/AD6+/kA+/v5APb3+gD7/vkA/P37APz8/QD+/fsA/vz9AP/8/QD6+voA+Pf5APj9+gDaldsA/v/9AP///QD//v8A+fr5APj5+wD6+vkA//z8APv6+QD6+fsA+f7+APr3+AD+//wA/v7+APr8+wD8+/0A/v/7AP3+/QD9/f8A+fv8AP79/wD//f8A+/z6ABYKJAD9/PoA/fv8AP36/gD39foA+/78AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATg4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE4LgM4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBOC4uIC44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATguLi4kHQ44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE4Li4uPBoQGxQ4AQEBAQEBAQEBAQEBAQEBAQEBAQEBOC4uCQouLisKOjo4AQEBAQEBAQEBAQEBAQEBAQEBATguLQwSCgQENAguLi44AQEBAQEBAQEBAQEBAQEBAQE4Li45JC4aLi4uLi4uLjgBAQEBAQEBAQEBAQEBAQEBOC4nFS4ALi4uLi4uLi44AQEBAQEBAQEBAQEBAQE4ODguLDECAyMuLi4uLi4uOAEBAQEBAQEBAQEBAQEBOC42LikLPS4uLS4uLi4uLjgBAQEBAQEBAQEBAQEBATguLi4RDBcFMy4uLi4uLi44AQEBAQEBAQEBAQEBAQEBOC4iIS4hIS4mMi4uLi4uOAEBAQEBAQEBAQEBAQEBAQEBOB4uFiEhIS4uHC4uLjgBAQEBAQEBAQEBAQEBAQEBAQE4NRAoISEhIS4tBy44AQEBAQEBAQEBAQEBAQEBAQEBATgvITsuISEhLg8uOAEBAQEBAQEBAQEBAQEBAQEBAQEBOBghJS4wHzUZNy44AQEBAQEBAQEBAQEBAQEBAQEBAQE4LgYNLiEDKiEuLjgBAQEBAQEBAQEBAQEBAQEBAQEBAQE4ODguISQqLi44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBOBYDEzguLjgBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBODg4ATg4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf///////////////////////P////h////wP///4B///8AP//+AB///AAP//gAD//wAB//gAA//wAAf/4AAP/+AAH//wAD//8AB///AA///wAP//8AD///gB///+Af///xP////////////////////////////////////////'), auto; }</style>
+</body>
+
+</html>

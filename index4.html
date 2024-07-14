@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Get to know more about me <3</title>
+    <script src="https://kit.fontawesome.com/89a0f098ca.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.75),rgba(0,0,0,0.75)), url(background1.jpeg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar .fa-solid{
+    margin-right: 8px;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #d3ed84;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position:absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align:left;
+    color: #fff;
+    display:grid
+    grid-template-columns 1fr;
+    height: vh;
+    padding: 3rem calc((100vw - 1300px) /2);
+}
+
+.column-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    padding: 0rem 2rem;
+    font-size: 20px;
+
+}
+
+.content p{
+    margin: 20px;
+    font-weight: 80;
+    line-height: 25px;
+}
+
+/*-----------me-----------*/
+#me{
+    padding: 30px 0;
+    color: whitesmoke;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 60%;
+}
+
+.about-col-1 img{
+    width: 60%;
+    border-radius: 15px;
+    margin-left: 30%;
+}
+
+.about-col-2{
+    flex-basis: 40%;
+}
+
+.sub-title{
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 10px 0 20px;
+}
+
+.tab-links{
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:rgb(108, 204, 204);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 8px 0 10px;
+}
+
+.tab-contents ul li span{
+    color:#d3ed84;
+    font-size: 18px;
+}
+
+.tab-contents{
+    display: none;
+    font-size: 18px;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+.school{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    margin-left: 50px;
+}
+
+.school div img{
+    height: 150px;
+    width: 260px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    animation-delay: 0.5s;
+}
+
+.school div{
+    position: relative;
+    transition: background 0.5s, transform 0.5s;
+    height: 5px;
+    width: 260px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+
+.school div:hover{
+    background: rgb(240, 100, 174);
+    transform: translateY(-10px)
+}
+
+.school div span{
+    color:antiquewhite;
+}
+
+.school div span{
+    list-style: none;
+    display: inline-block;
+    margin: 0 50px;
+    position: relative;
+}
+
+.school div span a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.school div span::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #d3ed84;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.school div span:hover::after{
+    width: 100%;
+}
+
+.anime{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+</style>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo">nurnajwa</div>
+            <ul>
+                <li><a href="index3.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="index5.html"><i class="fa-solid fa-paw"></i>About Me</a></li>
+                <li><a href="index7.html"><i class="fa-solid fa-star"></i></i>My Interest</a></li>
+                <li><a href="index6.html"><i class="fa-solid fa-envelopes-bulk"></i>Contact</a></li>
+            </ul>
+        </div>
+
+<!------------me------------>
+<div id="me">
+    <div class="container">
+        <div class="row" >
+            <div class="about-col-1">
+                <img src="bio.png" class="anime">
+            </div>
+            <div class="about-col-2">
+                <h1 class="anime" class="sub-title">More about me</h2>
+
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="Education">
+                        <ul>
+                            <li><span>2010 - 2015</span><br>SK Taman Pantai Sepang Putra</li>
+                            <li><span>2016 - 2021</span><br>SMK Pantai Sepang Putra</li>
+                            <li><span>2021 - 2023</span><br>SMK Sungai Pelek</li>
+                            <li><span>2023 - Current</span><br>UiTM Kampus Puncak Perdana</li>
+                        </ul>
+                     </div>
+
+                     <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>School Prefect (2012 - 2015)</span><br>SK Taman Pantai Sepang Putra</li>
+                            <li><span>School Prefect (2018 - 2021)</span><br>SMK Pantai Sepang Putra</li>
+                            <li><span>School Library Prefect (2021 - 2023)</span><br>SMK Sungai Pelek</li>
+                            <li><span>Exco <em>Generation Library Information Society (GenLIS)</em> <br>(2023 - Current)</span><br>Exco Kerohanian Dan Kebajikan GenLIS</li>
+                        </ul>
+                     </div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="education">
+    <div class="school">
+        <div>
+            <img src="sktpsp.png" class="anime">
+            <span>
+                <h3 class="anime"><a href="https://sktpsp.edu.my/">SKTPSP</a></h3>
+            </span>
+        </div>
+
+        <div>
+            <img src="smkpsp.png" class="anime">
+            <span>
+                <h3 class="anime"><a href="http://semestranet.blogspot.com/">SMKPSP</a></h3>
+            </span>
+        </div>
+
+        <div>
+            <img src="semspel9.png" class="anime">
+            <span>
+                <h3 class="anime"><a href="https://smksgpelek.blogspot.com/search/label/Tingkatan%206">SEMSPEL</a></h3>
+            </span>
+        </div>
+
+        <div>
+            <img src="uitm pundana.jpg" class="anime">
+            <span>
+                <h3 class="anime"><a href="https://puncakperdana.uitm.edu.my/v3/index.php">UiTM</a></h3>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+<style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAQACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAD///oAAAAAAPn7+wD+/f4A//3+APn6/QD7+/sA+/j6APj8/wD++fgA/P39AP7++wD9/f0A///5AP/9/QD7/PgA/Pv6APj59wD7//8A/fz+AP/9/AD6+/kA+/v5APb3+gD7/vkA/P37APz8/QD+/fsA/vz9AP/8/QD6+voA+Pf5APj9+gDaldsA/v/9AP///QD//v8A+fr5APj5+wD6+vkA//z8APv6+QD6+fsA+f7+APr3+AD+//wA/v7+APr8+wD8+/0A/v/7AP3+/QD9/f8A+fv8AP79/wD//f8A+/z6ABYKJAD9/PoA/fv8AP36/gD39foA+/78AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATg4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE4LgM4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBOC4uIC44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATguLi4kHQ44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE4Li4uPBoQGxQ4AQEBAQEBAQEBAQEBAQEBAQEBAQEBOC4uCQouLisKOjo4AQEBAQEBAQEBAQEBAQEBAQEBATguLQwSCgQENAguLi44AQEBAQEBAQEBAQEBAQEBAQE4Li45JC4aLi4uLi4uLjgBAQEBAQEBAQEBAQEBAQEBOC4nFS4ALi4uLi4uLi44AQEBAQEBAQEBAQEBAQE4ODguLDECAyMuLi4uLi4uOAEBAQEBAQEBAQEBAQEBOC42LikLPS4uLS4uLi4uLjgBAQEBAQEBAQEBAQEBATguLi4RDBcFMy4uLi4uLi44AQEBAQEBAQEBAQEBAQEBOC4iIS4hIS4mMi4uLi4uOAEBAQEBAQEBAQEBAQEBAQEBOB4uFiEhIS4uHC4uLjgBAQEBAQEBAQEBAQEBAQEBAQE4NRAoISEhIS4tBy44AQEBAQEBAQEBAQEBAQEBAQEBATgvITsuISEhLg8uOAEBAQEBAQEBAQEBAQEBAQEBAQEBOBghJS4wHzUZNy44AQEBAQEBAQEBAQEBAQEBAQEBAQE4LgYNLiEDKiEuLjgBAQEBAQEBAQEBAQEBAQEBAQEBAQE4ODguISQqLi44AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBOBYDEzguLjgBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBODg4ATg4AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf///////////////////////P////h////wP///4B///8AP//+AB///AAP//gAD//wAB//gAA//wAAf/4AAP/+AAH//wAD//8AB///AA///wAP//8AD///gB///+Af///xP////////////////////////////////////////'), auto; }</style>
+</body>
+
+</html>
